@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/appsilon-dashboard/static/css/main.fde021cd.css",
+    "main.js": "/appsilon-dashboard/static/js/main.915f4434.js",
+    "static/js/787.fff974d9.chunk.js": "/appsilon-dashboard/static/js/787.fff974d9.chunk.js",
+    "static/media/agent.png": "/appsilon-dashboard/static/media/agent.ac33f965f973fc3aa93b.png",
+    "static/media/avater.png": "/appsilon-dashboard/static/media/avater.8d38bbad0d1bc577e7a0.png",
+    "static/media/company.svg": "/appsilon-dashboard/static/media/company.fc06a915ab0cec3e67e1c921cdeba828.svg",
+    "static/media/logo.svg": "/appsilon-dashboard/static/media/logo.5bfcea3d2efd3924363aff6959acf34a.svg",
+    "static/media/report.svg": "/appsilon-dashboard/static/media/report.50a4b3d619b949730566d8bd5a5ab7e9.svg",
+    "static/media/user-account.svg": "/appsilon-dashboard/static/media/user-account.7b46ca715640f59c679ca49062754aa9.svg",
+    "static/media/policy.svg": "/appsilon-dashboard/static/media/policy.42332150c4b31dd5f318bcda3d2a83c3.svg",
+    "static/media/background.svg": "/appsilon-dashboard/static/media/background.a89b7711f377e6c56b7d3381fc9bc379.svg",
+    "index.html": "/appsilon-dashboard/index.html",
+    "static/media/log-out.svg": "/appsilon-dashboard/static/media/log-out.243a924224528ea5cc1a6a31bdb3b598.svg",
+    "static/media/overview.svg": "/appsilon-dashboard/static/media/overview.f3f78ef4cc50a97f71ae66e51e880a9b.svg",
+    "static/media/history.svg": "/appsilon-dashboard/static/media/history.7006dbdb16c369362523f0aab72469ba.svg",
+    "main.fde021cd.css.map": "/appsilon-dashboard/static/css/main.fde021cd.css.map",
+    "main.915f4434.js.map": "/appsilon-dashboard/static/js/main.915f4434.js.map",
+    "787.fff974d9.chunk.js.map": "/appsilon-dashboard/static/js/787.fff974d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fde021cd.css",
+    "static/js/main.915f4434.js"
+  ]
+}
