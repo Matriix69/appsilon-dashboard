@@ -1,0 +1,426 @@
+$bg: #fff
+$alt-bg: #F4F5F9
+$purple: #713BDB
+$purple-light: #888CB7
+$black: #42474A
+$gray: #A2A4B9
+$green: #33D69F
+$green-gradient: linear-gradient(90deg, #33D69F 0%, #50EDB8 111.47%)
+$purple-gradient: linear-gradient(90deg, #713BDB 0%, #A886E9 111.47%)
+$gray-gradient: linear-gradient(90deg, #ECECEC 0%, #F2F1F1 111.47%)
+$text-small: 10px
+$text: 14px
+$text-regular: 16px
+$text-medium: 17px
+$text-large: 22px
+
+@mixin buttonLayout
+  border: none
+  outline: none
+  appearance: none
+  background: none
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+
+@mixin flexLayOut($direction)
+    display: flex
+    align-items: center
+    @if $direction != row
+        flex-direction: column
+
+    
+.dashboard
+    height: 100%
+    width: 100%
+
+    .top-bar
+        @include flexLayOut(row)
+        position: fixed
+        top: 0
+        height: 87px
+        width: 100%
+        color: $black
+        background: $bg
+        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1)
+        z-index: 91
+        transition: all 0.3s ease
+
+        @media screen and (max-width: 64rem) 
+            padding: 0 1.5rem
+
+        &-nav
+            display: block
+            margin-left: 361px
+            height: 100%
+            
+
+            @media screen and (max-width: 550px) 
+                display: none
+            @media screen and (max-width: 64rem) 
+                margin-left: auto
+            
+            &-list
+                display: flex
+                gap: 34px
+                font-size: $text-regular
+                height: inherit
+
+                @media screen and (max-width: 500px) 
+                    gap: 14px
+
+                &-item
+                    height: inherit
+
+
+                    a
+                        color: $black
+                        cursor: pointer
+                        height: inherit
+                        @include flexLayOut(row)
+
+
+                    &-active
+                        color: $purple !important
+                        position: relative
+
+                        &::after
+                            content: ""
+                            display: block
+                            position: absolute
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            bottom: 1.7rem
+                            height: 2px
+                            width: 16px
+                            background-color: $purple
+                           
+        .company
+            margin-left: 1.3rem
+            @media screen and (min-width: 64rem) 
+                display: none
+
+        &-burger
+            @include buttonLayout
+            height: 100%
+            @media screen and (min-width: 64rem) 
+                display: none
+            
+            &-toggle
+                &::before, &::after 
+                    content: ""
+                    display: block
+                    height: 1px
+                    width: 22px
+                    background-color: $black
+                    transition: transform 0.15s ease
+                
+                &::after 
+                    transform: translateY(4px) rotate(0deg)
+                
+                &::before 
+                    transform: translateY(-4px) rotate(0deg)
+                
+
+    .side-bar
+        background-color: $bg
+        width: 306px
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 92
+        overflow-y: auto
+        
+        box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05)
+        transition: all 0.5s cubic-bezier(0, 0, 0.2, 1)
+
+        @media screen and (max-width: 64rem) 
+            transform: translateX(-120%)
+            max-width: 255px
+            width: calc(100% - 56px)
+            // width: 225px
+        
+
+        &-content
+            @include flexLayOut(column)
+            padding: 30px
+            height: 100%
+
+        
+
+        .user
+            @include flexLayOut(column)
+            margin-bottom: 49px
+            margin-top: 22px
+
+
+            img
+                width: 78px
+                height: 78px
+                margin-bottom: 7px
+
+            &-greeting
+                color: $purple-light
+                font-size: $text-regular
+                font-weight: 700
+                line-height: 21px
+                margin-bottom: 4px
+            &-alert
+                font-size: $text-small
+                color: $gray
+                line-height: 13px   
+                margin-bottom: 3px
+            &-plan
+                font-size: $text
+                color: $gray
+
+                span
+                    color: $green
+            &-create-plan
+                @include buttonLayout 
+                color: #FFFBFB
+                height: 35px
+                background-color: $purple
+                padding: 0 19px
+                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.12)
+                border-radius: 7px
+                margin-top: 20px
+        
+        .side-bar-nav
+            display: flex
+            flex: 1 1
+            &-list
+                display: flex
+                flex-direction: column
+                gap: 28px
+
+                &-item
+                    a, button
+                        @include buttonLayout
+                        display: flex
+                        align-items: center
+                        gap: 25px
+                        color: $gray
+                        font-weight: 600
+                        svg
+                            height: 20px
+                            width: 20px
+
+                    button
+                        font-size: 17px
+                        svg
+                            height: 18px
+                            width: 18px
+                    
+                    &-active
+                        span
+                            color: $purple 
+                        path
+                            fill: $purple
+
+                .action
+                    margin-top: auto
+    .side-bar-toggle
+        transform: translateX(0%)
+
+    .company
+            @include flexLayOut(row)
+            gap: 11px
+
+            &-name
+                font-size: $text-regular
+                font-weight: 600
+
+            svg
+                height: 27px
+                width: 27px
+    .content
+        background: $alt-bg
+        width: 100%
+        min-height: 100vh
+        padding: 114px 16px 
+
+        @media screen and (min-width: 610px) 
+            padding: 114px 37px
+
+
+        @media screen and (min-width: 64rem) 
+            padding: 114px 37px 37px 343px
+
+        
+    
+    &-overlay 
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        position: fixed
+        z-index: 1
+        background-color: rgba(0, 0, 0, 0.15)
+        @media screen and (min-width: 64rem) 
+            display: none
+    &-overlay-none 
+        display: none
+    
+
+
+
+.dashboard-content
+    width: 100%
+    max-width: 981px
+    // margin: 0 auto
+
+    &-hero
+        position: relative
+        height: 311px
+        width: 100%
+        background: #F8F9FF
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+
+        @include flexLayOut(row)
+        overflow: hidden
+        margin-bottom: 20px
+        padding: 0 1rem
+
+        @media screen and (max-width: 882px) 
+            flex-direction: column
+            height: auto
+            padding: 30px 30px 50px
+
+        svg
+            position: absolute
+            width: 100%
+            bottom: 0
+            left: 0
+            right: 0
+        img
+            height: auto
+            width: 90%
+            @media screen and (min-width: 610px) 
+                width: 50%
+                
+        
+        &-text
+            position: relative
+            z-index:1
+            color: $black
+            // padding-right: 10px
+            
+            h1
+                font-weight: 600
+                font-size: 33px
+                line-height: 44px
+                margin-bottom: 3px
+                @media screen and (max-width: 882px) 
+                    text-align: center
+            &-code
+                display: flex
+                justify-content: center
+                gap: 16px
+
+                @media screen and (max-width: 380px)
+                    flex-direction: column
+                    align-items: center
+                    margin-top: 1rem
+
+                .code-value
+                    font-weight: 400
+                    font-size: $text-large
+                    line-height: 29px
+                    height: 42px
+                    border: 1px dashed $black
+                    border-radius: 5px
+                    padding: 0 13px
+                    display: flex
+                    align-items: center
+                    width: fit-content
+
+
+                button
+                    @include buttonLayout
+                    font-weight: 500
+                    font-size: $text-large
+                    line-height: 29px
+    .card
+        display: grid
+        gap: 19px
+        grid-template-columns: minmax(0, 1frx   )
+
+        @media screen and (min-width: 610px) 
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+
+        @media screen and (min-width: 882px) 
+            grid-template-columns: repeat(3, minmax(0, 314px)) 
+        
+
+        &-content
+            height: 298px
+            background: $bg
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.06)
+            padding: 20px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            color: $black
+
+
+
+            &-disbursement
+                display: block
+
+                h1
+                    font-weight: 400
+                    font-size: 55px
+                    line-height: 73px
+
+                    sup
+                        color: $purple
+                        font-size: 35px
+                        line-height: 47px
+
+                p
+                    font-weight: 400
+                    font-size: $text-medium
+                    line-height: 23px
+            
+            &-policy, &-claim
+                width: 100%
+                display: grid
+                gap: 8px
+
+                .claim, .policy
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+
+                    h2
+                        font-weight: 400
+                        font-size: $text-medium
+                        line-height: 23px
+                    div
+                        font-size: $text-large
+                        line-height: 29px
+                        sup
+                            font-size: 13px
+            &-policy
+                progress::-webkit-progress-value 
+                    background: $green-gradient
+            &-claim
+                progress::-webkit-progress-value 
+                    background: $purple-gradient
+
+            progress
+                width: 100%
+                @include buttonLayout
+                height: 5px
+                border-radius: 2px
+                overflow: hidden
+
+                &::-webkit-progress-bar 
+                    background: $gray-gradient
+                
+
+
+
+        
+        
