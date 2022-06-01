@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { navLinks } from "../../utiles/utiles";
 import Avater from "../../assets/avater.png";
@@ -10,10 +10,10 @@ const SideBar = ({ toggleMenu, setToggleMenu }) => {
         <div className={`side-bar ${toggleMenu ? "side-bar-toggle" : ""}`}>
             <div className="side-bar-content">
                 {/* company logo */}
-                <div className="company">
+                <Link to={"/"} className="company">
                     <Logo />
                     <span className="company-name">Insurance Portal</span>
-                </div>
+                </Link>
 
                 {/* user details and plan */}
                 <div className="user">
@@ -38,7 +38,9 @@ const SideBar = ({ toggleMenu, setToggleMenu }) => {
                                     className={({ isActive }) =>
                                         isActive ? "side-bar-nav-list-item-active" : undefined
                                     }
-                                    onClick={() => setToggleMenu(!toggleMenu)}
+                                    onClick={() => {
+                                        if (toggleMenu !== false) setToggleMenu(false);
+                                    }}
                                 >
                                     {icon}
                                     <span>{title}</span>

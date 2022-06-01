@@ -25,7 +25,7 @@ const Dashboard = () => {
                 {/* link routes */}
                 <Routes>
                     {navLinks.map(({ link }) => (
-                        <Route path={link} element={<DashboardContent />} />
+                        <Route exact path={link} element={<DashboardContent />} />
                     ))}
                 </Routes>
             </div>

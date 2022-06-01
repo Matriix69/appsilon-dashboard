@@ -78,6 +78,10 @@ $text-large: 22px
                         height: inherit
                         @include flexLayOut(row)
 
+                        &:hover
+                            color: $purple !important
+                            transition: color .3s ease
+
 
                     &-active
                         color: $purple !important
@@ -124,13 +128,13 @@ $text-large: 22px
     .side-bar
         background-color: $bg
         width: 306px
-        height: 100vh
+        // height: 100vh
         position: fixed
         top: 0
         left: 0
+        bottom: 0
         z-index: 92
         overflow-y: auto
-        
         box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05)
         transition: all 0.5s cubic-bezier(0, 0, 0.2, 1)
 
@@ -202,6 +206,7 @@ $text-large: 22px
                         gap: 25px
                         color: $gray
                         font-weight: 600
+                        
                         svg
                             height: 20px
                             width: 20px
@@ -212,11 +217,15 @@ $text-large: 22px
                             height: 18px
                             width: 18px
                     
-                    &-active
+                    &-active, &:hover
                         span
                             color: $purple 
+                            transition: all .3s ease
+
                         path
                             fill: $purple
+                            transition: all .3s ease
+
 
                 .action
                     margin-top: auto
@@ -230,6 +239,7 @@ $text-large: 22px
             &-name
                 font-size: $text-regular
                 font-weight: 600
+                color: #000
 
             svg
                 height: 27px
@@ -255,7 +265,7 @@ $text-large: 22px
         right: 0
         bottom: 0
         position: fixed
-        z-index: 1
+        z-index: 2
         background-color: rgba(0, 0, 0, 0.15)
         @media screen and (min-width: 64rem) 
             display: none
@@ -268,7 +278,7 @@ $text-large: 22px
 .dashboard-content
     width: 100%
     max-width: 981px
-    // margin: 0 auto
+    margin: 0 auto
 
     &-hero
         position: relative
@@ -295,15 +305,16 @@ $text-large: 22px
             right: 0
         img
             height: auto
-            width: 90%
+            width: 100%
             @media screen and (min-width: 610px) 
-                width: 50%
+                width: 48%
                 
         
         &-text
             position: relative
             z-index:1
             color: $black
+            // margin-right: -10%
             // padding-right: 10px
             
             h1
@@ -311,8 +322,7 @@ $text-large: 22px
                 font-size: 33px
                 line-height: 44px
                 margin-bottom: 3px
-                @media screen and (max-width: 882px) 
-                    text-align: center
+                text-align: center
             &-code
                 display: flex
                 justify-content: center
