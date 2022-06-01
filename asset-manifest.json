@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/appsilon-dashboard/static/css/main.78221914.css",
-    "main.js": "/appsilon-dashboard/static/js/main.fea83e12.js",
+    "main.js": "/appsilon-dashboard/static/js/main.2cd31a2e.js",
     "static/js/787.fff974d9.chunk.js": "/appsilon-dashboard/static/js/787.fff974d9.chunk.js",
     "static/media/agent.png": "/appsilon-dashboard/static/media/agent.ac33f965f973fc3aa93b.png",
     "static/media/avater.png": "/appsilon-dashboard/static/media/avater.8d38bbad0d1bc577e7a0.png",
@@ -16,11 +16,11 @@
     "static/media/log-out.svg": "/appsilon-dashboard/static/media/log-out.b05d86aede4e6b6fa393291f8d0c258d.svg",
     "static/media/history.svg": "/appsilon-dashboard/static/media/history.7006dbdb16c369362523f0aab72469ba.svg",
     "main.78221914.css.map": "/appsilon-dashboard/static/css/main.78221914.css.map",
-    "main.fea83e12.js.map": "/appsilon-dashboard/static/js/main.fea83e12.js.map",
+    "main.2cd31a2e.js.map": "/appsilon-dashboard/static/js/main.2cd31a2e.js.map",
     "787.fff974d9.chunk.js.map": "/appsilon-dashboard/static/js/787.fff974d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78221914.css",
-    "static/js/main.fea83e12.js"
+    "static/js/main.2cd31a2e.js"
   ]
 }
