@@ -18,9 +18,9 @@ export const navLinks = [
         link: "/policy",
     },
     {
-        title: "Report",
+        title: "Reports",
         icon: <Report />,
-        link: "report",
+        link: "reports",
     },
     {
         title: "Company",
